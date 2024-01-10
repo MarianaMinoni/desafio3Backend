@@ -19,7 +19,7 @@ class ProductManager {
     async guardarProductos() {
 
         try{
-           await  fs.promises.writeFile(this.path, 'utf-8')
+           await  fs.promises.writeFile((this.path, null, 2), 'utf-8')
             console.log('Productos guardados correctamente.');
 
         }
@@ -165,7 +165,7 @@ upDateProduct(id, propAmodificar, cambio){
 
 const productManager = new ProductManager('./package-json/productos.json');
 
-//const productManager = new ProductManager('./package-json/productos.json');
+
 
 
 

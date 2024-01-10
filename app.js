@@ -8,9 +8,24 @@ const port = 3000
 app.get('/ping', (req, res) => {
   res.send('pong');
   
+  
  
  
 })
+
+//app.get('/products', (req, res) => {
+
+  
+
+    //req: analizar el req del usuario, si esta todo ok, y si tiene sentido
+
+    //llamar a las funciones del modelo de negocio para resolver la consulta del cliente
+    //let productos = productManager.traerProductos()
+
+    //res: enviar respuesta de lo que solicito el cliente
+    //res.send(productos)
+
+//})
 
 
 
@@ -29,7 +44,7 @@ app.get('/products', async (req, res) => {
       // Llama a traerProductos y espera a que la promesa se resuelva
       let productos = await productManager.traerProductos();
       
-      //envio todos los productos usuario
+      //envio todos los productos al  usuario
       res.send(productos);
   } catch (error) {
     
